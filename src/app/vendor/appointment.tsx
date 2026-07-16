@@ -1,14 +1,80 @@
-import { View, Text, StyleSheet } from "react-native";
+import {
+View,
+Text,
+TextInput,
+Button,
+StyleSheet
+} from "react-native";
 
-export default function AppointmentScreen() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Vendor Appointment</Text>
-    </View>
-  );
+
+export default function Appointment(){
+
+
+return(
+
+<View style={styles.container}>
+
+
+<Text style={styles.title}>
+Vendor Appointment
+</Text>
+
+
+
+<TextInput
+placeholder="Company Name"
+style={styles.input}
+/>
+
+
+
+<TextInput
+placeholder="Contact Person"
+style={styles.input}
+/>
+
+
+
+<TextInput
+placeholder="Purpose"
+style={styles.input}
+/>
+
+
+
+<Button
+title="Request Appointment"
+onPress={()=>{
+alert("Appointment Requested")
+}}
+/>
+
+
+</View>
+
+)
+
 }
 
-const styles = StyleSheet.create({
-  container:{flex:1,justifyContent:"center",alignItems:"center"},
-  title:{fontSize:24,fontWeight:"bold"},
+
+
+const styles=StyleSheet.create({
+
+container:{
+padding:20
+},
+
+title:{
+fontSize:25,
+fontWeight:"bold"
+},
+
+
+input:{
+borderWidth:1,
+padding:12,
+marginTop:15,
+borderRadius:8
+}
+
 });
